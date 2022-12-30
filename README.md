@@ -1,8 +1,17 @@
-# TAPNTOUR Challange
+# Winter Internship TAPNTOUR Challenge Program
 
-The challenge is building a simple UI to show Tour Detail & Guides
+This is a Intership TAPNTOUR Challenge Program, please follow the below intructions to complete the challenge.  
+Please if you have any question send a email to info@glyfo.com. 
 
-## Current Stack 
+## Objetive 
+
+Please clone this repository and finish the 3 challenges. Using the endpoint database to fetch the data. 
+```console
+1-  Show the all tours in a List Component  using TourView.vue file.     ( ETC 6 hrs ) 
+2-  Show the all guides in a List Component using GuideView.vue file.    ( ETC 6 hrs )
+3-  Show the tour detail in a List Component using  TourDetail.vue file. ( ETC 6 hrs )
+```
+## Our Stack
 
 ```console
 + Vue3 
@@ -82,14 +91,5 @@ $ git clone repo_challenge
 $ npm install 
 $ npm run dev 
 $ npm run build --> deploy the app
-
-```
-
-### Challenges 
-
-```
-1-  Show the all tours in a List using TourView.vue file 
-2-  Show the all guides in a List using GuideView.vue file 
-3-  Show the tour detail in a new Vue file 
 
 ```
