@@ -26,21 +26,3 @@
         
     </div>
 </template>
-<script>
-
-export default {
-  name: 'TourDetail',
-  components: {
-    
-  },
-  data () {
-    return {
-    }
-  },
-  computed: {
-  },
-  methods: {
-  }
-}
-
-</script>

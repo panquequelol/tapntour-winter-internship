@@ -18,8 +18,8 @@
         <FeatureItem></FeatureItem>
       </div>
     </article>  
-  </template>
-  <script> 
+</template>
+<script> 
   import FeatureItem from '@/components/FeatureItem.vue'
   import DescriptionItem from '@/components/DescriptionItem.vue'
 
@@ -35,4 +35,4 @@
     }
   }
 }   
-  </script>     
+</script>     

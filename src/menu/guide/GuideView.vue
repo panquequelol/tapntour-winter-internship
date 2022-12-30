@@ -1,6 +1,6 @@
 <template>
 <div>
-<GuideList @open="popupOpen" ></GuideList>
+<GuideList></GuideList>
 </div>
 </template>
 <script>
@@ -10,18 +10,6 @@ export default {
   name: 'GuideView',
   components: {
     GuideList
-},
-  emits: ['open'],
-  data() {
-    return {
-    }
-  },
-  created: function () {
-  this.$nextTick(function () {
-       this.$store.dispatch("fetchAllGuides")
-  })
-  },
-  methods: {
-  }
+}
 }
 </script>

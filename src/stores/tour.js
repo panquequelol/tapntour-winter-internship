@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
+import axios from 'axios'
 
-const tour_endpoint     = 'https://tapntour-wk-db.glyfo.workers.dev/api/tours'
+const tour_endpoint = 'https://tapntour-wk-db.glyfo.workers.dev/api/tours'
 
 export const useTourStore = defineStore({
   id: 'tour',
@@ -19,8 +20,9 @@ export const useTourStore = defineStore({
       this.tours = []
       this.loading = true
       try {
-        this.tours = await fetch(tour_endpoint)
-        .then((response) => response.json()) 
+        this.tours =  await axios.post(tour_endpoint)
+        .then((response) => response.data) 
+
       } catch (error) {
         this.error = error
       } finally {
@@ -31,8 +33,8 @@ export const useTourStore = defineStore({
       this.tour = null
       this.loading = true
       try {
-        this.post = await fetch(tourbyid_endpoint)
-        .then((response) => response.json())
+        this.post = await axios.post(tourbyid_endpoint)
+        .then((response) => response)
       } catch (error) {
         this.error = error
       } finally {

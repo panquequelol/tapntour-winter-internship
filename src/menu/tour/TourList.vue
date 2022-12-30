@@ -19,24 +19,24 @@
   import { useTourStore } from '@/stores/tour'
 
   import TourItem from '@/menu/tour/TourItem.vue'
-
+  import ListView from '@/components/ListView.vue'
   import NavView from '@/components/NavView.vue'
   import NavItem from '@/components/NavItem.vue'
-  import ListView from '@/components/ListView.vue'
-
 
   export default defineComponent({
     components: {
       NavView,
       NavItem,
-      ListView,
-      ListItem
+      TourItem,
+      ListView
     },
     setup() {
-      const { tours, loading, error }  = storeToRefs(usePostStore())
+      const { tours, loading, error }  = storeToRefs(useTourStore())
       const { fetchTours }             = useTourStore()
 
       fetchTours()
+      
+      return { tours , loading , error }
     },
   methods: {
   
