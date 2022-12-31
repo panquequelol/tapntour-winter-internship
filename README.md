@@ -1,7 +1,16 @@
 # Winter Internship TAPNTOUR Challenge Program
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/afc15aab-520a-4c6f-bfaa-40c637792b98/deploy-status)](https://app.netlify.com/sites/thunderous-scone-cca05b/deploys)
+
 This is a Intership TAPNTOUR Challenge Program, please follow the below intructions to complete the challenge.  
 Please if you have any question send a email to info@glyfo.com. 
+
+## Candidate
+Name: René Cáceres A.
+
+Email: rene@outlook.my
+
+Deployed Project: [Live Version](https://thunderous-scone-cca05b.netlify.app/)
 
 ## Objetive 
 
@@ -17,7 +26,8 @@ Please clone this repository and finish the 3 challenges. Using the endpoint dat
 + Vue3 
 + Vite 
 + Tailwincss 
-+ Pinia 
++ Pinia
++ Axios
 ```
 
 ## Database Model 
