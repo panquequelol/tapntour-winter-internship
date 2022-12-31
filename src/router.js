@@ -35,7 +35,7 @@ const routes = [
     component: SignUpView,
   },
   {
-    path: "/TourDetail",
+    path: "/tours/:id",
     name: "TourDetail",
     component: TourDetail,
   },

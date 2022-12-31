@@ -7,7 +7,7 @@ export const useTourStore = defineStore({
   id: "tour",
   state: () => ({
     tours: [],
-    tour: null,
+    tour: {},
     loading: false,
     error: null,
   }),
@@ -39,12 +39,17 @@ export const useTourStore = defineStore({
       }
     },
     async fetchTourbyId(id) {
-      this.tour = null;
       this.loading = true;
       try {
-        this.post = await axios
-          .post(tourbyid_endpoint)
-          .then((response) => response);
+        const { data } = await axios.post(`${tour_endpoint}/${id}`, {
+          mode: "no-cors",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        });
+        console.log(`[tour store]: fetch data for tour ${id}`);
+        this.tour = data[0];
       } catch (error) {
         this.error = error;
       } finally {

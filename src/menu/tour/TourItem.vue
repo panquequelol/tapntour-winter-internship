@@ -1,5 +1,5 @@
 <template>
-    <article  @click="goToDetail()" class="flex items-start space-x-6 p-6">
+    <article  @click="goToDetail(item.id)" class="flex items-start space-x-6 p-6">
       <img :src="item.image" alt="" class=" object-cover h-48 w-28 flex-none rounded-md bg-slate-100" />
       <div class="min-w-0 relative flex-auto">
         <h2 class="font-semibold text-slate-900 truncate pr-20">{{ item.name }}</h2>
@@ -30,8 +30,8 @@
     },
     props : ['item'],
     methods: {
-    goToDetail() {
-      this.$router.push('/TourDetail')
+    goToDetail(id) {
+      this.$router.push(`/tours/${id}`);
     }
   }
 }   
