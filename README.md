@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/afc15aab-520a-4c6f-bfaa-40c637792b98/deploy-status)](https://app.netlify.com/sites/thunderous-scone-cca05b/deploys)
 
-This is a Intership TAPNTOUR Challenge Program, please follow the below intructions to complete the challenge.  
+This is a Internship TAPNTOUR Challenge Program, please follow the below intructions to complete the challenge.  
 Please if you have any question send a email to info@glyfo.com. 
 
 ## Candidate
