@@ -23,16 +23,11 @@ export const useTourStore = defineStore({
     async fetchTours() {
       this.loading = true;
       try {
-        const { data } = await axios.post(tour_endpoint, {
-          mode: "no-cors",
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-          },
-        });
+        const { data } = await axios.post(tour_endpoint);
         console.log("[tour store]: fetch data");
         this.tours = data;
       } catch (error) {
+        console.log("[tour store]: error when fetching,", error);
         this.error = error;
       } finally {
         this.loading = false;
@@ -41,13 +36,7 @@ export const useTourStore = defineStore({
     async fetchTourbyId(id) {
       this.loading = true;
       try {
-        const { data } = await axios.post(`${tour_endpoint}/${id}`, {
-          mode: "no-cors",
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-          },
-        });
+        const { data } = await axios.post(`${tour_endpoint}/detail/${id}`);
         console.log(`[tour store]: fetch data for tour ${id}`);
         this.tour = data[0];
       } catch (error) {

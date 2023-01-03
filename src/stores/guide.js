@@ -16,13 +16,7 @@ export const useGuideStore = defineStore({
       this.guides = [];
       this.loading = true;
       try {
-        const { data } = await axios.post(guide_endpoint, {
-          mode: "no-cors",
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-          },
-        });
+        const { data } = await axios.post(guide_endpoint);
         console.log("[guide store]: fetch data");
         this.guides = data;
       } catch (error) {
