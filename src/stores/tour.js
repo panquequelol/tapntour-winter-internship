@@ -38,7 +38,7 @@ export const useTourStore = defineStore({
       try {
         const { data } = await axios.post(`${tour_endpoint}/detail/${id}`);
         console.log(`[tour store]: fetch data for tour ${id}`);
-        this.tour = data[0];
+        this.tour = data;
       } catch (error) {
         this.error = error;
       } finally {
